@@ -28,6 +28,14 @@
     <!-- Put everything in ${build} into the MyProject-${DSTAMP}.jar file -->
     <jar jarfile="${dist}/lib/MyProject-${DSTAMP}.jar" basedir="${build}"/>
   </target>
+  
+  <target name="archive" depends="dist">
+  <tar compression="gzip" destfile="test-${DSTAMP}.tar.gz">
+    <tarfileset dir="${dist}/lib/" prefix="${dist}/lib/">
+      <include name="test/**" /> 
+    </tarfileset>
+  </tar>
+</target>
 
   <target name="clean"
         description="clean up">
