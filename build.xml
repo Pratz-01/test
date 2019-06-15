@@ -14,6 +14,10 @@
     <mkdir dir="${build}"/>
   </target>
 
+  <presetdef name="javac">
+    <javac includeantruntime="false" />
+  </presetdef>
+  
   <target name="compile" depends="init"
         description="compile the source">
     <!-- Compile the Java code from ${src} into ${build} -->
