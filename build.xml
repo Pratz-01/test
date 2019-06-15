@@ -31,8 +31,7 @@
   
   <target name="archive" depends="dist">
   <tar compression="gzip" destfile="test-${DSTAMP}.tar.gz">
-    <tarfileset dir="${dist}/lib/" prefix="${dist}/lib/">
-      <include name="test/**" /> 
+    <tarfileset dir="${dist}/lib/">
     </tarfileset>
   </tar>
 </target>
