@@ -29,9 +29,9 @@
     <jar jarfile="${dist}/lib/MyProject-${DSTAMP}.jar" basedir="${build}"/>
   </target>
   
-  <target name="archive">
+ <target name="archive">
   <tar compression="gzip" destfile="test-${DSTAMP}.tar.gz">
-    <tarfileset dir="${dist}/lib/">
+    <tarfileset prefix="${dist}/lib/">
     </tarfileset>
   </tar>
 </target>
