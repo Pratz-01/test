@@ -34,7 +34,7 @@
   </target>
   
  <target name="archive" depends="dist">
-  <tar compression="gzip" destfile="test-${DSTAMP}.tar.gz">
+  <tar compression="gzip" destfile="${dist}/lib/test-${DSTAMP}.tar.gz">
     <tarfileset dir="${dist}/lib/" prefix="${dist}/lib/">
       <include name="MyProject**" /> 
     </tarfileset>
